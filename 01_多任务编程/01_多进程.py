@@ -108,10 +108,12 @@ def work():
 
 
 if __name__ == '__main__':
-    work_process = multiprocessing.Process(target=work())
+    work_process = multiprocessing.Process(target=work)
+    # 设置主进程（法一）
     # work_process.daemon = True
     work_process.start()
 
-    time.sleep(0.2)
+    time.sleep(1)
+    # 设置主进程（法二）
     work_process.terminate()
-    print('主进程结束')
+    print('主进程执行结束啦！')
