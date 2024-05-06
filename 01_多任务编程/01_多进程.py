@@ -1,4 +1,12 @@
 # 进程是资源分配的最小单位
+
+'''
+多任务执行方式有两种方式：
+并发:在一段时间内交替去执行多个任务。
+并行:在一段时间内真正的同时一起执行多个任务
+'''
+
+
 import time
 import multiprocessing
 import os
@@ -68,6 +76,9 @@ import os
 #
 #
 # if __name__ == '__main__':
+#
+#     # 程序运行会默认创建一个进程, 这个默认创建的进程我们称之为主进程
+#     # 子进程由主进程创建
 #     print('主进程编号：%d' % os.getpid())
 #     confing_process = multiprocessing.Process(target=confing)
 #     music_process = multiprocessing.Process(target=music)
